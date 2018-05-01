@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<!-- 流体布局 -->
+<!-- <style type="text/css">
+  .left {
+    float: left;
+    height: 200px;
+    width: 100px;
+    background-color: red;
+  }
+  .right {
+    float: right;
+    width: 200px;
+    height: 200px;
+    background-color: blue
+  }
+  .main {
+    margin-left: 120px;
+    margin-right: 220px;
+    height: 200px;
+    background-color: green
+  }
+</style> -->
+<!-- BFC布局 -->
+<!-- <style type="text/css">
+  .left {
+    float: left;
+    height: 200px;
+    width: 100px;
+    background-color: red;
+  }
+  .right {
+    float: right;
+    width: 200px;
+    height: 200px;
+    background-color: blue
+  }
+  .main {
+    overflow: hidden;
+    height: 200px;
+    background-color: green
+  } 
+</style> -->
+<!-- 双飞翼布局 -->
+<!-- <style type="text/css">
+  .content {
+    float: left;
+    width: 100%
+  }
+  .main {
+    height: 200px;
+    margin-left: 110px;
+    margin-right: 220px;
+    background-color: green
+  }
+  .left {
+    float: left;
+    height: 200px;
+    width: 100px;
+    margin-left: -100%;
+    background-color: red;
+  }
+  .right {
+    width: 200px;
+    height: 200px;
+    float: right;
+    margin-left: -200px;
+    background-color: blue;
+  }
+</style> -->
+<!-- 圣杯布局 -->
+<!-- <style type="text/css">
+  .container {
+    margin-left: 120px;
+    margin-right: 220px;
+  }
+  .main {
+    float: left;
+    width: 100%;
+    height: 300px;
+    background-color: red;
+  }
+  .left {
+    float: left;
+    width: 100px;
+    height: 300px;
+    margin-left: -100%;
+    position: relative;
+    left: -120px;
+    background-color: blue;
+  }
+  .right {
+    float: left;
+    width: 200px;
+    height: 300px;
+    margin-left: -200px;
+    position: relative;
+    right: -220px;
+    background-color: green;
+  }
+</style> -->
+<!-- Flex布局 -->
+<style type="text/css">
+  .container {
+    display: flex;
+  }
+  .main {
+    flex-grow: 1;
+    height: 300px;
+    background-color: red;
+    margin-left: 20px;
+  }
+  .left {
+    order: -1;
+    flex: 0 1 200px;
+
+    height: 300px;
+    background-color: blue;
+  }
+  .right {
+    flex: 0 1 100px;
+    margin-left: 20px;
+    height: 300px;
+    background-color: green;
+  }
+</style>
+
+<body>
+<!-- 流体布局、BFC布局、圣杯布局、Flex布局 -->
+<div class="container">
+  <div class="main"></div>
+  <div class="left"></div>
+  <div class="right"></div>
+</div>
+<!-- 双飞翼布局 -->
+
+<!-- <div class="content">
+  <div class="main"></div>
+</div>
+<div class="left"></div>
+<div class="right"></div> -->
+</body>
+</html>

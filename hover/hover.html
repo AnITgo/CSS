@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>css动画学习</title>
+</head>
+<style type="text/css">
+  img{
+    height: 15px;
+    width: 15px;
+    transition: width cubic-bezier(.97,-0.39,0,1.25) 1s, 1s height ease-out;
+/*  
+    第一个可以被解析为时间的值会赋值给duration，第二个时间值赋值给delay
+    始末值必须明确，不然transition会失效
+    transition-property: height;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    transition-timing-function: ease */
+  }
+  img:hover{
+    height: 450px;
+    width: 450px;
+  }
+  .colorChange {
+    width: 450px;
+    height: 450px;
+    background: red
+  }
+  .colorChange:hover {
+    animation: 1s rainbow reverse linear 3;
+/*  
+    第一个数字是duration，第二个数字是iteration-count（无限循环infinite），第一个string是animation-name
+    animation-name: rainbow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards/none/backwards/both;
+    animation-direction: normal;
+    animation-iteration-count: 3; */
+
+  }
+  @keyframes rainbow {
+    0% { background: yellow }
+    50% { background: green }
+    100% { background: blue }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .totate {
+    width: 9em;
+    padding: .6em 1em;
+    margin: 1em auto;
+    background: yellowgreen;
+    animation: spin 1s linear infinite;
+    animation-play-state: paused;
+  }
+  .totate:hover {
+    animation-play-state: running;
+  }
+</style>
+<body>
+  <img src="1.jpg">
+  <div class="colorChange"></div>
+  <div class="totate"></div>
+</body>
+</html>
